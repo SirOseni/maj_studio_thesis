@@ -4,33 +4,102 @@
     <img src="heroImage.png" alt="Image description">
   </div>
   <el-row>
-  <div class="introduction">
-    <div class="image-container">
-      <img src="introImage.png" alt="sportswashing is global">
-    </div>
+   <div class="introduction">
+      <div class="image-container">
+        <img src="introImage.png" alt="sportswashing is global">
+      </div>
     <div class="text-container">
       <p class="introText">
-      Sportswashing is the use of sports by 
-      <span class="bold-text">nations, corporations and wealthy individuals</span> 
-      to improve negative reputations. Through 
-      <span class="bold-text">hosting</span> 
-      sporting events, 
-      <span class="bold-text">acquiring</span> 
-      sporting teams and 
-      <span class="bold-text">sponsoring</span> 
-      teams and events.
+        Sportswashing is the use of sports by 
+        <span class="bold-text">nations, corporations and wealthy individuals</span> 
+        to improve negative reputations. Through 
+        <span class="bold-text">hosting</span> 
+        sporting events, 
+        <span class="bold-text">acquiring</span> 
+        sporting teams and 
+        <span class="bold-text">sponsoring</span> 
+        teams and events.
       </p>
     </div>
-</div>
-    </el-row>
-    
-    <div>
+   </div>
+  </el-row>
+
+  <div>
       <el-row>
         <div class="container">
           <div id="imageContainer"></div> 
         </div>
       </el-row>
+  </div>
+
+   <div>
+        <div class="aftermathText">
+          <p>In the aftermath of the 2018 World Cup and the controversy surrounding Russia, penalties were handed out to the major offenders.</p>
+        </div>
+
+      <div class = "dataTableContainer">
+        <table class = "dataTable">
+          <thead>
+            <tr>
+              <th>Offenders</th>
+              <th>Fines</th>
+              <th>Sanctions</th>
+            </tr>
+          </thead>
+            <tr>
+              <td><a href="https://inside.fifa.com/tournaments/mens/worldcup/qatar2022/media-releases/fifa-uefa-suspend-russian-clubs-and-national-teams-from-all-competitions" target = "blank"><img src="img/russia.jpg" alt="Russia"></a></td>
+              <td>❌</td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td><a href="khttps://www.standard.co.uk/news/uk/roman-abramovich-chelsea-added-to-uk-sanctions-list-russian-oligarch-b987187.html" target = "blank"><img src="img/gazprom.jpg" alt="Gazprom"></a></td>
+              <td>✔️</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.espn.com/soccer/story/_/id/37625797/man-united-cut-sponsorship-russian-airline-aeroflot-amid-ukraine-invasion" target = "blank"><img src="img/aeroflot.png" alt="Aeroflot"></a></td>
+              <td>✔️</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.standard.co.uk/news/uk/roman-abramovich-chelsea-added-to-uk-sanctions-list-russian-oligarch-b987187.html" target = "blank"><img src="img/abrahmovic.png" alt="Abrahmovic"></a></td>
+              <td>✔️</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.sportspromedia.com/news/everton-alisher-usmanov-usm-megafon-yota-sponsors-russia-ukraine/" target = "blank"><img src="img/usmanov.png" alt="Usmanov"></a></td>
+              <td>❌</td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.treasury.gov/resource-center/sanctions/OFAC-Enforcement/Pages/20180406.aspx"><img src="img/kerimov.png" alt="Kerimov" target = "blank"></a></td>
+              <td>✔️</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td><a href="chttps://www.goal.com/en-us/news/chelsea-transfer-ban-why-fifa-sanctioned-blues-what-appeal-process/tt4ejezxvltd1k8r5symf4rkn" target = "blank"><img src="img/chelsea.png" alt="Chelsea"></a></td>
+              <td>✔️</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.cbssports.com/soccer/news/everton-face-10-point-penalty-after-premier-league-financial-fair-play-rules-breach/" target = "blank"><img src="img/everton.jpg" alt="Everton"></a></td>
+              <td>✔️</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.sportspromedia.com/news/everton-alisher-usmanov-usm-megafon-yota-sponsors-russia-ukraine/" target = "blank"><img src="img/megafon.jpg" alt="Megafon"></a></td>
+              <td>✔️</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.sportspromedia.com/news/everton-alisher-usmanov-usm-megafon-yota-sponsors-russia-ukraine/" target = "blank"><img src="img/usm.png" alt="Usm Holdings"></a></td>
+              <td>✔️</td>
+              <td>❌</td>
+            </tr>
+        </table>
+      </div>
     </div>
+  
 </div>
 </template>
 
@@ -152,7 +221,7 @@ export default {
   height:200px;
   object-fit: contain;
   position: relative;
-  transform: translate(600px, 0px);
+  transform: translate(500px, 0px);
   
 }
 .image2 {
@@ -168,9 +237,8 @@ export default {
   width: 510px;
   height:75px;
   object-fit: contain;
-  transition: transform 9s ease;  
   position: absolute; 
-  transform: rotateZ(-4.5deg) translate(20%, 460%);
+  transform: rotateZ(-4.5deg) translate(15%, 460%);
   transition: transform 5s ease; 
 }
 .image4 {
@@ -178,7 +246,7 @@ export default {
   height:150px;
   object-fit: contain;
   position: absolute;  
-  transform: rotateZ(7deg) translate(28%, 100%);
+  transform: rotateZ(7deg) translate(14%, 95%);
   transition: transform 8s ease; 
 }
 .image5 {
@@ -195,7 +263,7 @@ export default {
   height:200px;
   object-fit: contain;
   position: relative;
-  transform: rotateZ(0deg) translate(0%, 40%);
+  transform: rotateZ(0deg) translate(-15%, 40%);
   transition: transform 14s ease;
 }
 .image7 {
@@ -211,7 +279,7 @@ export default {
   height:200px;
   object-fit: contain;
   position: relative;
-  transform: rotateZ(-7deg) translate(10%, -190%);
+  transform: rotateZ(-7deg) translate(5%, -190%);
   transition: transform 18s ease; 
 }
 .image9 {
@@ -219,7 +287,7 @@ export default {
   height:200px;
   object-fit: contain;
   position: relative;
-  transform: rotateZ(-15deg) translate(-80%, -180%);
+  transform: rotateZ(-15deg) translate(-85%, -180%);
   transition: transform 21s ease;
 }
 
@@ -230,6 +298,63 @@ export default {
   position: absolute; 
   transform: rotateZ(0deg) translate(-130%, -180%);
   transition: transform 24s ease; 
+}
+
+.aftermathText {
+  padding: 20px;
+  text-align: center;
+}
+
+.aftermathText p {
+  text-align: center;
+  display:block;
+}
+
+
+.dataTableContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Table styles */
+.dataTable {
+  border-collapse: collapse;
+  width: 100%;
+  height: 300px;
+  top: 20; bottom: 20; left: 30px; right: 30;
+  border-spacing: 10px;
+  padding-left: 50px;
+}
+
+.dataTable th, .dataTable td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.dataTable th {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Link styles */
+.dataTable a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.dataTable a:hover {
+  text-decoration: underline;
+   transform: scale(1.5);
+  transition: ease-in;
+ }
+
+/* Image styles */
+.dataTable img {
+  max-width: 100px; /* Adjust image width as needed */
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 
 </style>
