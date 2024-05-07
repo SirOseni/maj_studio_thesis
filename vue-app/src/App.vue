@@ -32,12 +32,37 @@
       </el-row>
   </div>
 
-   <div>
-        <div class="aftermathText">
-          <p>In the aftermath of the 2018 World Cup and the controversy surrounding Russia, penalties were handed out to the major offenders.</p>
-        </div>
 
-      <div class = "dataTableContainer">
+ 
+  <div class="method">
+      <div class="methodContainer">
+        <img src="processImg/method0.svg" alt="method">
+      </div>
+      <div class="method-container">
+        <img src="processImg/method1.svg" alt="method">
+     </div>
+  </div>
+ 
+  <div>
+      <el-row>
+        <div class="costContainer">
+          <div class="flourish-embed flourish-scatter" data-src="visualisation/17855266"></div>  
+        </div>
+      </el-row>
+  </div>
+
+   <div>
+        <div class="statContainer">
+          <div class="flourish-embed flourish-radar" data-src="visualisation/17857173"></div> 
+        </div>
+  </div>
+
+ <div>
+      <div class="aftermathText">
+        <p>In the aftermath of the 2018 World Cup and the controversy surrounding Russia, penalties were handed out to the major offenders.</p>
+      </div>
+
+       <div class = "dataTableContainer">
         <table class = "dataTable">
           <thead>
             <tr>
@@ -98,7 +123,8 @@
             </tr>
         </table>
       </div>
-    </div>
+  </div>
+
   
 </div>
 </template>
@@ -138,6 +164,12 @@ export default {
   },
   mounted() {
    this.createImageElements();
+
+    // Embed Flourish script
+    const flourishScript = document.createElement('script');
+    flourishScript.src = "https://public.flourish.studio/resources/embed.js";
+    document.body.appendChild(flourishScript);
+    
   },
 };
 </script>
@@ -356,5 +388,46 @@ export default {
   border-radius: 5px;
   margin-bottom: 5px;
 }
+
+.method {
+  display: flex; /* Use flexbox */
+  height: 100vh; /* Full height of the viewport */
+}
+
+.methodContainer,
+.method-container {
+  flex: 1; /* Equal flex distribution */
+  display: flex; /* Nested flex containers */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+.methodContainer img {
+  max-width: 100%; 
+  max-height: 100%; 
+}
+
+.method-container img {
+  max-width: 100%; 
+  max-height: 100%; 
+}
+
+.statContainer{
+  margin: 60px auto;
+  width: 960px; 
+  position: relative; 
+  border: 0.1rem solid pink;
+  overflow: hidden;
+}
+
+.costContainer{
+  margin: 60px auto;
+  width: 960px; 
+  height: 600px; 
+  position: relative; 
+  border: 0.1rem solid blue;
+  overflow: hidden;
+}
+
 
 </style>
