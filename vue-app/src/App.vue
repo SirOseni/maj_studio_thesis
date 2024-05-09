@@ -6,7 +6,7 @@
   <el-row>
    <div class="introduction">
       <div class="image-container">
-        <img src="introImage.png" alt="sportswashing is global">
+        <img src="introImage.jpg" alt="sportswashing is global">
       </div>
     <div class="text-container">
       <p class="introText">
@@ -41,6 +41,11 @@
       <div class="method-container">
         <img src="processImg/method1.svg" alt="method">
      </div>
+  </div>
+
+  <div>
+    <h1> Russia's Football Network </h1>
+    <div class="network"></div>
   </div>
  
   <div>
@@ -124,17 +129,27 @@
         </table>
       </div>
   </div>
+ 
+  <div class="conclusionImage">
+    <img src="closingImage.png" alt="Fans can take action">
+  </div>
+  
 
   
 </div>
 </template>
 
 <script>
+// import controversy from "./components/controversy.vue";
   const imageFiles = ['headline1.png', 'headline2.png', 'headline3.png','headline4.png','headline5.png','headline6.png','headline7.png','headline8.png','headline9.png','headline10.png'];
 
 
 export default {
   name: "App",
+  // components: {
+  //   controversy
+  // },
+  
   data() {
     return {
      
@@ -209,8 +224,8 @@ export default {
 }
 
 .image-container img {
-  max-width: 100%; /* Ensure image fits within container */
-  max-height: 100%; /* Ensure image fits within container */
+  max-width: 80%; /* Ensure image fits within container */
+  max-height: 80%; /* Ensure image fits within container */
 }
 
 .introText {
@@ -229,8 +244,6 @@ export default {
   color: #0D99FF;
   font-style: italic;
 }
-
-
 
 .container {
   margin: 60px auto;
@@ -335,16 +348,18 @@ export default {
 .aftermathText {
   padding: 20px;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .aftermathText p {
   text-align: center;
   display:block;
+  font-size: 26px;
 }
 
 
 .dataTableContainer {
-  max-width: 800px;
+  width: 960px; 
   margin: 0 auto;
 }
 
@@ -416,7 +431,6 @@ export default {
   margin: 60px auto;
   width: 960px; 
   position: relative; 
-  border: 0.1rem solid pink;
   overflow: hidden;
 }
 
@@ -425,9 +439,29 @@ export default {
   width: 960px; 
   height: 600px; 
   position: relative; 
-  border: 0.1rem solid blue;
   overflow: hidden;
 }
+
+.network{
+  margin: 60px auto;
+  width: 960px; 
+  height: 540px; 
+  position: relative; 
+  overflow: hidden;
+}
+
+.network img {
+  max-width: 100%; 
+  max-height: 100%; 
+}
+
+.conclusionImage{
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  margin: 10% auto;
+}
+
 
 
 </style>
