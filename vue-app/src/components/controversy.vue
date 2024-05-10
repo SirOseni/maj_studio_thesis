@@ -1,6 +1,5 @@
 <template>
   <div>
-      <h1>Sportwash Network</h1>
     <div class="network"></div>
   </div>
 </template>
@@ -9,35 +8,34 @@
 import * as d3 from 'd3';
 
 export default {
-  name: "BarChart",
+  name: "controversy",
   data() {
     return {
      dataset: {
       nodes: [
-      { id: 1, name: 'Russia', img: './img/russia.jpg', size: 500},
-      { id: 2, name: 'Roman Abrahmovic', img: '../img/abrahmovic.png',size: 300,
-      },
-      { id: 3, name: 'Alisha Usmanov', img: '../img/usmanov.png', size: 300 },
-      { id: 4, name: 'Dmitry rybolovlev', img: '../img/ryoloblev.png', size: 300 },
-      { id: 5, name: 'Suleyman Kerimov', img: '../img/kerimov.png', size: 300},
-      { id: 6, name: 'Farhad Moshiri', img: '../img/moshiri.png', size: 150 },
-      { id: 7, name: 'Gazprom', img: '../img/gazprom.jpg', size: 300 },
-      { id: 8, name: 'Sibneft', img: '../img/sibneft.png', size: 100 },
-      { id: 9, name: 'Aeroflot', img: '../img/aeroflot.png', size: 200 },
-      { id: 10, name: 'Uralkali', img: '../img/uralkali.png', size: 200 },
-      { id: 11, name: 'Megafon', img: '../img/megafon.jpg', size: 200 },
-      { id: 12, name: 'MetalloInvest',img: '../img/metalloinvest.jpg',size: 100 },
-      { id: 13, name: 'USM Holdings', img: '../img/usm.png', size: 200 },
-      { id: 14, name: 'Chelsea', img: '../img/chelsea.png', size: 150 },
-      { id: 15, name: 'Zenit St. Petersburg', img: './img/zenit.png', size: 150},
-      { id: 16, name: 'Monaco', img: './img/monaco.jpg', size: 150 },
-      { id: 17, name: 'Everton', img: './img/everton.jpg', size: 125},
-      { id: 18, name: 'Anzhi Makhachkala', img: './img/anzhi.jpg', size: 150 },
-      { id: 19, name: 'Manchester United', img: './img/manu.jpg', size: 125 },
-      { id: 20, name: 'Schalke', img: './img/schalke.jpg', size: 125 },
-      { id: 21, name: 'Red Star Belgrade', img: './img/redstar.png', size: 125 },
-      { id: 22, name: 'FIFA', img: './img/fifa.png', size: 125 },
-      { id: 23, name: 'UEFA', img: './img/uefa.jpg', size: 125},
+      { id: 1, name: 'Russia', img: 'img/russia.jpg', size: 500},
+      { id: 2, name: 'Roman Abrahmovic', img: 'img/abrahmovic.png',size: 300},
+      { id: 3, name: 'Alisha Usmanov', img: 'img/usmanov.png', size: 300 },
+      { id: 4, name: 'Dmitry rybolovlev', img: 'img/ryoloblev.png', size: 300 },
+      { id: 5, name: 'Suleyman Kerimov', img: 'img/kerimov.png', size: 300},
+      { id: 6, name: 'Farhad Moshiri', img: 'img/moshiri.png', size: 150 },
+      { id: 7, name: 'Gazprom', img: 'img/gazprom.jpg', size: 300 },
+      { id: 8, name: 'Sibneft', img: 'img/sibneft.png', size: 100 },
+      { id: 9, name: 'Aeroflot', img: 'img/aeroflot.png', size: 200 },
+      { id: 10, name: 'Uralkali', img: 'img/uralkali.png', size: 200 },
+      { id: 11, name: 'Megafon', img: 'img/megafon.jpg', size: 200 },
+      { id: 12, name: 'MetalloInvest',img: 'img/metalloinvest.jpg',size: 100 },
+      { id: 13, name: 'USM Holdings', img: 'img/usm.png', size: 200 },
+      { id: 14, name: 'Chelsea', img: 'img/chelsea.png', size: 150 },
+      { id: 15, name: 'Zenit St. Petersburg', img: 'img/zenit.png', size: 150},
+      { id: 16, name: 'Monaco', img: 'img/monaco.jpg', size: 150 },
+      { id: 17, name: 'Everton', img: 'img/everton.jpg', size: 125},
+      { id: 18, name: 'Anzhi Makhachkala', img: 'img/anzhi.jpg', size: 150 },
+      { id: 19, name: 'Manchester United', img: 'img/manu.jpg', size: 125 },
+      { id: 20, name: 'Schalke', img: 'img/schalke.jpg', size: 125 },
+      { id: 21, name: 'Red Star Belgrade', img: 'img/redstar.png', size: 125 },
+      { id: 22, name: 'FIFA', img: 'img/fifa.png', size: 125 },
+      { id: 23, name: 'UEFA', img: 'img/uefa.jpg', size: 125},
     ],
     links: [
       { source: 1, target: 2, color: "black"},
@@ -92,8 +90,8 @@ export default {
       const nodes = this.dataset.nodes;
 
     this.tooltip = d3
-      .select(".container")
-	    .append("div")
+      .select(".network")
+      .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
       .style("background-color", "black")
@@ -125,7 +123,7 @@ export default {
         .force('collide', d3.forceCollide().radius(30));
       
       this.svg = d3
-        .select(this.$refs.container)
+        .select(".network")
         .append('svg')
         .attr('width', width)
         .attr('height', height)
@@ -140,15 +138,15 @@ export default {
         .attr('cy', imgRadius)
         .attr('r', imgRadius);
 
-      const link = this.svg
-        .append('g')
-        .attr('stroke', '#999')
-        .attr('stroke-opacity', 5)
-        .selectAll('line')
-        .data(links)
-        .join('line')
-        .attr('stroke-width', 2)
-        .attr('stroke', (d) => d.color);
+      //  const link = this.svg
+      //   .append('g')
+      //   .attr('stroke', '#999')
+      //   .attr('stroke-opacity', 5)
+      //   .selectAll('line')
+      //   .data(links)
+      //   .join('line')
+      //   .attr('stroke-width', 2)
+      //   .attr('stroke', (d) => d.color);
 
       const node = this.svg
         .append('g')

@@ -43,9 +43,9 @@
      </div>
   </div>
 
-  <div>
+  <div class="network">
     <h1> Russia's Football Network </h1>
-    <div class="network"></div>
+    <div class="flourish-embed flourish-network" data-src="visualisation/17888935"></div>
   </div>
  
   <div>
@@ -133,8 +133,6 @@
   <div class="conclusionImage">
     <img src="closingImage.png" alt="Fans can take action">
   </div>
-  
-
   
 </div>
 </template>
@@ -427,6 +425,13 @@ export default {
   max-height: 100%; 
 }
 
+.network{
+   margin: 20px auto; 
+   width: 80%; 
+   padding: 20px; 
+   
+}
+
 .statContainer{
   margin: 60px auto;
   width: 960px; 
@@ -442,18 +447,6 @@ export default {
   overflow: hidden;
 }
 
-.network{
-  margin: 60px auto;
-  width: 960px; 
-  height: 540px; 
-  position: relative; 
-  overflow: hidden;
-}
-
-.network img {
-  max-width: 100%; 
-  max-height: 100%; 
-}
 
 .conclusionImage{
   width: 100%;
@@ -461,7 +454,5 @@ export default {
   display: block;
   margin: 10% auto;
 }
-
-
 
 </style>
